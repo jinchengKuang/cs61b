@@ -99,6 +99,9 @@ public class IntList {
         if (B == null){
             return A;
         }
+        if (A == null){
+            return B;
+        }
         IntList res = new IntList(A.first, null);
         IntList p = res;
         A = A.rest;
