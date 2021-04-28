@@ -22,7 +22,7 @@ public class LinkedListDeque<T> {
     }
 
     //@source https://www.youtube.com/watch?v=JNroRiEG7U4
-    private LinkedListDeque(LinkedListDeque other) {
+    public LinkedListDeque(LinkedListDeque other) {
         sentinel = new Node(null, null, null);
         sentinel.prev = sentinel;
         sentinel.next = sentinel;
@@ -33,7 +33,7 @@ public class LinkedListDeque<T> {
         }
     }
 
-    public T getRecursiveHelper(Node currNode, int index) {
+    private T getRecursiveHelper(Node currNode, int index) {
         if (index == 0) {
             return currNode.item;
         }
