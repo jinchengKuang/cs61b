@@ -53,6 +53,9 @@ public class ArrayDeque<T> {
         if (currSize * 1.0 / items.length < 0.25 && items.length >= 8) {
             resizeHelper(currSize / 2);
         }
+        if (size == 0) {
+            resizeHelper(8);
+        }
     }
 
     public T get(int index) {

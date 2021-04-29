@@ -22,16 +22,16 @@ public class LinkedListDeque<T> {
     }
 
     //@source https://www.youtube.com/watch?v=JNroRiEG7U4
-    public LinkedListDeque(LinkedListDeque other) {
-        sentinel = new Node(null, null, null);
-        sentinel.prev = sentinel;
-        sentinel.next = sentinel;
-        size = 0;
-
-        for (int i = 0; i < other.size; i += 1) {
-            addLast((T) other.get(i));
-        }
-    }
+//    public LinkedListDeque(LinkedListDeque other) {
+//        sentinel = new Node(null, null, null);
+//        sentinel.prev = sentinel;
+//        sentinel.next = sentinel;
+//        size = 0;
+//
+//        for (int i = 0; i < other.size; i += 1) {
+//            addLast((T) other.get(i));
+//        }
+//    }
 
     private T getRecursiveHelper(Node currNode, int index) {
         if (index == 0) {
