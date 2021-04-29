@@ -50,7 +50,7 @@ public class ArrayDeque<T> {
         if (size == items.length) {
             resizeHelper(currSize * 4);
         }
-        if (currSize * 1.0 / items.length < 0.25 && items.length >= 16) {
+        if (currSize * 1.0 / items.length < 0.25 && items.length >= 8) {
             resizeHelper(currSize / 2);
         }
     }
@@ -100,19 +100,6 @@ public class ArrayDeque<T> {
             System.out.print(items[i] + " ");
             i = onePlus(i);
         }
-    }
-
-    public static void main(String[] args) {
-        ArrayDeque<Integer> aq = new ArrayDeque<Integer>();
-        for (int i = 0; i < 100; i += 1) {
-            aq.addLast(i);
-        }
-        aq.printDeque();
-        for (int i = 0; i < 98; i += 1) {
-            aq.removeFirst();
-        }
-        aq.printDeque();
-        System.out.println(aq.get(0));
     }
 
 }
